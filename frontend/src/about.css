@@ -1,0 +1,57 @@
+.content{
+    display: flex;
+    justify-content: center;
+}
+
+.imgContainer img{
+    margin-top: 5vh;
+    height: 95vh;
+    opacity: 30%;
+    filter: blur(1px);
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+}
+
+.contentContainer{
+    margin-top: 15vh;
+    z-index: 10;
+    transform: translatex(-10vw);
+}
+
+.contentContainer h1{
+    color: #D87A33;
+}
+
+.text{
+    padding-left: 50px;
+}
+
+table{
+    margin-left: 50px;
+}
+
+th ,tr{
+    border: 1px solid black;
+    padding: 0;
+}
+
+th{
+    padding: 10px;
+}
+
+#firstTh{
+    transition: transform 0.1s ease-in-out;
+}
+
+#firstTh:hover{
+    transform: scale(1.05);
+    transition: transform 0.1s ease-in-out;
+}
+
+tr p{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}

@@ -1,0 +1,56 @@
+.form{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.FormContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    padding: 15px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+}
+
+#loginForm input[type="text"], #validCodeForm input[type="text"]{
+    width: 30px;
+    height: 40px;
+    margin-left: 10px;
+    border-radius: 10px;
+    border: 1px solid #EDEDED;
+    text-align: center;
+    font-size: 15px;
+    color: #D87A33;
+}
+
+#loginForm input[type="text"]:focus{
+    border: 1px solid #D87A33;
+}
+
+#submit{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: #D87A33;
+    color: #EDEDED;
+    border: none;
+    font-size: 20px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
+    margin-left: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+#submit:hover{
+    transition: all 0.3s ease-in-out;
+    width: 60px;
+    border-radius: 10px;
+}
+
+#loginForm input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

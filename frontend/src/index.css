@@ -1,0 +1,139 @@
+canvas { 
+    display: block;
+}
+
+.content{
+    display: flex;
+    justify-content: space-between;
+}
+
+.content-glass-plate, .section{
+    position: relative;
+    top: 100px;
+    width: fit-content;
+    height: fit-content;
+    background: transparent;
+    z-index: 10;
+}
+
+.content-glass-plate h1{
+    font-size: 4rem;
+    padding-left: 15vw;
+    color: #D87A33;
+    padding-bottom: 50px;
+}
+
+.content-glass-plate h2{
+    font-size: 2rem;
+    padding-left: 15vw;
+    color: #000;
+    padding-bottom: 50px;
+}
+
+.content-glass-plate a {
+    font-size: 1.5rem;
+    padding-left: 15vw;
+    color: #337AD8;
+    text-decoration: none;
+    background-image: linear-gradient(120deg, #337AD8 0%, #337AD8 100%);
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    background-position: 15vw 100%;
+    transition: background-size 0.4s cubic-bezier(0.4,0,0.2,1);
+}
+
+.content-glass-plate a:hover {
+    background-size: 100% 2px;
+}
+
+#home-img{
+    position: fixed;
+    height: 130vh;
+    z-index: 5;
+    left: 60%;
+    top: 50%;
+    animation: rotateHomeImg 60s linear infinite;
+}
+
+@keyframes rotateHomeImg {
+    from {
+        transform: translateY(-50%) rotate(0deg);
+    }
+    to {
+        transform: translateY(-50%) rotate(360deg);
+    }
+}
+
+.section{
+    color: #D87A33;
+    padding-left: 15vw;
+    margin-top: 100px;
+}
+
+.section p{
+    color: #000;
+    position: relative;
+    padding-left: 50px;
+    cursor: pointer;
+    transition: padding-left 0.2s ease-in-out;
+}
+
+.section p:hover{
+    color: #D87A33;
+    padding-left: 60px;
+    transition: padding-left 0.2s ease-in-out;
+}
+
+/* Carousel Styles */
+.supporter-wall {
+    position: relative;
+    width: 70vw;
+    margin: 0 0 50px 0;
+    left: 0;
+}
+
+.carousel-container {
+    width: 100%;
+    overflow: hidden;
+    background-color: #EDEDED;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.carousel-track {
+    display: flex;
+    width: calc(270px * 8); /* Total width of all slides (including margins) */
+    animation: carousel 30s linear infinite;
+}
+
+.carousel-slide {
+    min-width: 250px;
+    height: 150px;
+    margin: 0 10px;
+    flex-shrink: 0;
+}
+
+.carousel-slide img {
+    width: 100%;
+    max-width: 250px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.carousel-slide img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #D87A33;
+}
+
+@keyframes carousel {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-270px * 4)); /* Half of the total width for seamless loop */
+    }
+}

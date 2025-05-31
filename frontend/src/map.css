@@ -1,0 +1,203 @@
+.content{
+    display: flex;
+}
+
+#map {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    z-index: 25;
+}
+
+.drawer{
+    position: fixed;
+    width: 100vw;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: absolute;
+    z-index: 1000;
+    top: calc(100vh - 55px);
+    left: 0;
+    right: 0;
+    overflow: hidden;
+}
+
+.drawer button{
+    margin-top: 20px;
+    border-radius: 20px;
+    width: 200px;
+    height: 30px;
+    background-color: #fff;
+    color: #D87A33;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    border: 1px solid #D87A33;
+}
+
+.drawer button:hover {
+    background-color: #D87A33;
+    color: #fff;
+    border: 1px solid #D87A33;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.drawer button i {
+    font-size: 18px;
+}
+
+.panel-track{
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: fit-content;
+    margin-top: calc(100vh - 295px);
+    z-index: 990;
+    padding: 10px;
+    padding-top: 35px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+    transition: transform 0.5s ease;
+}
+
+.panel-track.hidden {
+    transform: translateY(100%);
+}
+
+.panel-track::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+.panel{
+    position: relative;
+    width: 25vw;
+    min-width: 300px;
+    height: fit-content;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    margin-left: 20px;
+    transition: transform 0.3s ease-in-out;
+    border: 1px solid white;
+}
+
+.panel img{
+    width: 100%;
+    object-fit: cover;
+    max-height: 15%;
+    height: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Panel focus styling is now handled by JavaScript */
+
+.panel h3{
+    margin: 5px 5px 0 5px;
+}
+
+.hashtagContainer{
+    display: flex;
+    padding-left: 5px;
+}
+
+.hashtag{
+    background-color: rgba(128, 128, 128, 0.2);
+    opacity: 80%;
+    color: rgba(128, 128, 128, 1);
+    border-radius: 5px;
+    margin-right: 10px;
+    padding: 0 5px 0 5px;
+}
+
+.hashtag.michelin{
+    background-color: rgba(255, 165, 0, 0.2);
+    color: orange;
+}
+
+.hashtag.new{
+    background-color: rgba(0, 150, 0, 0.2);
+    color: green;
+}
+
+.hashtag.michelin{
+    background-color: rgba(255, 165, 0, 0.2);
+    color: orange;
+}
+
+.hashtag.classic{
+    background-color: rgba(255, 0, 0, 0.2);
+    color: red;
+}
+
+.hashtag.cheap{
+    background-color: rgba(0, 0, 255, 0.2);
+    color: blue;
+}
+
+.gmnoprint.gm-style-mtc-bbw, .gm-control-active.gm-fullscreen-control,.gm-svpc{
+    display: none;
+}
+
+.infoContainer{
+    display: flex;
+    align-items: center;
+}
+
+.menu{
+    display: block;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 30px;
+    z-index: 990;
+    padding: 10px;
+    height: 60vh;
+    border-radius: 20px;
+    background-color: #fff;
+    text-align: center;
+    transition: transform 0.5s ease-in-out;
+}
+
+.menu.hidden {
+    transform: translateX(-105%) translateY(-50%);
+}
+
+.menu img{
+    height: 100%;
+    border-radius: 10px;
+}
+
+.menu-toggle {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 991;
+    background-color: #fff;
+    color: #D87A33;
+    border: 1px solid #D87A33;
+    border-radius: 0 20px 20px 0;
+    padding: 10px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.menu-toggle:hover {
+    background-color: #D87A33;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.menu-toggle i {
+    font-size: 18px;
+}

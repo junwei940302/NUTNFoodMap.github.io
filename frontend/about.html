@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NUTN Food Map</title>
+    <link rel="stylesheet" href="./src/global.css">
+    <link rel="stylesheet" href="./src/about.css">
+    <script src="./src/global.js"></script>
+    <script src="./src/about.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-logo">
+                <a href="index.html"><img src="./assets/logo.png" alt="logo"></a>
+            </div>
+            <div class="header-menu">
+                <ul>
+                    <li><a href="index.html">最新消息</a></li>
+                    <li><a href="javascript:void(0)" onclick="checkMapAccess()">美食地圖</a></li>
+                    <li><a href="about.html">關於網站</a></li> 
+                </ul>
+                <a href="login.html" id="loginBtn">登入｜註冊</a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="imgContainer">
+                <img src="./assets/logo.png">
+            </div>
+            <div class="contentContainer">
+                <h1>網站設計</h1>
+                <p class="text">使用語言｜原生HTML/CSS/JavaScript</p>
+                <p class="text">網頁架構｜前端（Frontend）、模擬後端（Fake Backend）</p>
+                <p class="text">使用串接｜Google Maps JavaScript API</p>
+                <p class="text">主題顏色｜
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th style="background-color: #EDEDED; width: 20px; height: 20px;"  id="firstTh"></th>
+                                <th>
+                                    <p>#EDEDED</p>
+                                </th>
+                                <th>
+                                    <p>背景色</p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th style="background-color: #ffffff; width: 20px; height: 20px;" id="firstTh"></th>
+                                <th>
+                                    <p>#FFFFFF</p>
+                                </th>
+                                <th>
+                                    <p>元件色調</p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th style="background-color: #D87A33; width: 20px; height: 20px;" id="firstTh"></th>
+                                <th>
+                                    <p>#D87A33</p>
+                                </th>
+                                <th>
+                                    <p>主要色調</p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th style="background-color: #265DA5; width: 20px; height: 20px;" id="firstTh"></th>
+                                <th>
+                                    <p>#265DA5</p>
+                                </th>
+                                <th>
+                                    <p>次要色調</p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th style="background-color: #000000; width: 20px; height: 20px;" id="firstTh"></th>
+                                <th>
+                                    <p>#000000</p>
+                                </th>
+                                <th>
+                                    <p>一般字體</p>
+                                </th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </p>
+                <h1>報告分工</h1>
+                <p class="text">網頁主要製作｜電機二 黃峻偉</p>
+                <p class="text">簡報主要製作｜電機二 呂婉盈</p>
+                <p class="text">報告主要助攻｜OpenAI ChatGPT、Anthropic Claude</p>
+                <p class="text">商標主要設計｜OpenAI ChatGPT</p>
+                <h1>特別設計</h1>
+                <p class="text">特別設計-1｜把SessionStorage暫時當作Cookies模擬登入後的階段</p>
+                <p class="text">特別設計-2｜電話號碼與驗證碼的輸入都會自動切換下/上一格</p>
+                <p class="text">特別設計-3｜特別將Google Map上多餘的按鈕隱藏換取更簡潔的介面</p>
+                <p class="text">特別設計-4｜切換不同的位置也會自動更換不同菜單</p>
+                <p class="text">特別設計-5｜菜單與店面簡介可收納設計</p>
+                <p class="text">特別設計-6｜美食地圖非預設可查看，要登入才行</p>
+                <p class="text">特別設計-7｜對於不同裝置的自適應設計，我沒有做，因為時間不夠</p>
+                <p class="text">特別設計-8｜對於不同的物件設計不同的Position，讓網頁不只像一張紙，更像動畫</p>
+                <p class="text">特別設計-9｜採用大量border-radius圓角設計及大量transition搭配:hover偽類</p>
+                <p class="text">特別設計-10｜雙層矩形圓角設計：padding等於外border-radius減內border-radius</p>
+                <p class="text">特別設計-11｜移除所有滾動條::-webkit-scrollbar避免不同頁面的view-width相異</p>
+                <p class="text">特別設計-12｜最新消息的font-size使用rem為單位，給自己留後路</p>
+                <p class="text">特別設計-13｜JavaScript使用DOMContentLoaded，在快速響應的前提下，降低getElement的失敗率</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

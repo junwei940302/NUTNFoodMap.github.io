@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NUTN Food Map</title>
+    <link rel="stylesheet" href="./src/global.css">
+    <link rel="stylesheet" href="./src/map.css">
+    <script src="./src/global.js"></script>
+    <script>
+        // 檢查用戶是否已登入，如果未登入則重定向到登入頁面
+        document.addEventListener('DOMContentLoaded', function() {
+            const loginStatus = sessionStorage.getItem('loginStatus');
+            if (loginStatus !== 'True') {
+                alert('請先登入以訪問美食地圖！');
+                window.location.href = 'login.html';
+            }
+        });
+    </script>
+    <script src="./src/map.js"></script>
+    <script src="https://kit.fontawesome.com/981bb78518.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-logo">
+                <a href="index.html"><img src="./assets/logo.png" alt="logo"></a>
+            </div>
+            <div class="header-menu">
+                <ul>
+                    <li><a href="index.html">最新消息</a></li>
+                    <li><a href="javascript:void(0)" onclick="checkMapAccess()">美食地圖</a></li>
+                    <li><a href="about.html">關於網站</a></li> 
+                </ul>
+                <a href="login.html" id="loginBtn">登入｜註冊</a>
+            </div>
+        </div>
+        <div class="content">
+            <div id="map"></div>
+            <div class="drawer">
+                <button id="panel-toggle"><i class="fa-solid fa-download"></i></button>
+            </div>
+            <button class="menu-toggle" id="menu-toggle"><i class="fa-solid fa-chevron-right"></i></button>
+            <div class="menu hidden">
+                <img src="https://picdn.gomaji.com/uploads/stores/782/219782/358105/小麵殿大灣店(菜單)_page-0001-20241024.jpg">
+            </div>
+            <div class="panel-track">
+                <div class="panel">
+                    <img src="./assets/foodwall/images-1.jpeg">
+                    <h3>小麵殿 The Noodle Palace</h3>
+                    <div class="infoContainer">
+                        <div class="hashtagContainer">
+                            <p class="hashtag michelin">#2025南大米其林一星</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel">
+                    <img src="./assets/foodwall/images-2.jpeg">
+                    <h3>鼎 DING</h3>
+                    <div class="hashtagContainer">
+                        <p class="hashtag michelin">#2025南大米其林三星</p>
+                    </div>
+                </div>
+                <div class="panel">
+                    <img src="./assets/foodwall/images-3.jpeg">
+                    <h3>角鑄 KADOCHU</h3>
+                    <div class="hashtagContainer">
+                        <p class="hashtag">#特色料理 </p>
+                    </div>
+                </div>
+                <div class="panel">
+                    <img src="./assets/foodwall/images-4.jpeg">
+                    <h3>麵匡匡</h3>
+                    <div class="hashtagContainer">
+                        <p class="hashtag new">#新開幕</p>
+                    </div>
+                </div>
+                <div class="panel">
+                    <img src="./assets/foodwall/images-5.png">
+                    <h3>派克雞排-大同店</h3>
+                    <div class="hashtagContainer">
+                        <p class="hashtag classic">#經典不敗</p>
+                        <p class="hashtag">#宵夜精選 </p>
+                    </div>
+                </div>
+                <div class="panel">
+                    <img src="./assets/foodwall/images-6.png">
+                    <h3>貓樂義大利麵</h3>
+                    <div class="hashtagContainer">
+                        <p class="hashtag cheap">#大優惠</p>
+                    </div>
+                </div>
+                <div class="panel">
+                    <img src="./assets/foodwall/images-7.jpg">
+                    <h3>大林壽司株式會社</h3>
+                    <div class="hashtagContainer">
+                        <p class="hashtag cheap">#大優惠</p>
+                        <p class="hashtag">#CP最高 </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDNFn3O826ukG2FH3L8q5yP1H5Pl0ZOH5A&callback=initMap">
+  </script>
+</body>
+</html>

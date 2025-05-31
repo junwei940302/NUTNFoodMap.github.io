@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NUTN Food Map</title>
+    <link rel="stylesheet" href="./src/global.css">
+    <link rel="stylesheet" href="./src/login.css">
+    <script src="./src/global.js"></script>
+    <script src="./src/login.js"></script>
+    <script src="https://kit.fontawesome.com/981bb78518.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-logo">
+                <a href="index.html"><img src="./assets/logo.png" alt="logo"></a>
+            </div>
+            <div class="header-menu">
+                <ul>
+                    <li><a href="index.html">最新消息</a></li>
+                    <li><a href="javascript:void(0)" onclick="checkMapAccess()">美食地圖</a></li>
+                    <li><a href="about.html">關於網站</a></li> 
+                </ul>
+                <a href="login.html" id="loginBtn">登入｜註冊</a>
+            </div>
+        </div>
+        <div class="content">
+            <form id="loginForm" class="form" action="#" method="post">
+                <div class="FormContainer">
+                    <h3>+886</h3>
+                    <input type="text" maxlength="1" inputmode="numeric" pattern="\d*" data-number="1">
+                    <input type="text" maxlength="1" inputmode="numeric" pattern="\d*" data-number="2">
+                    <input type="text" maxlength="1" inputmode="numeric" pattern="\d*" data-number="3">
+                    <input type="text" maxlength="1" inputmode="numeric" pattern="\d*" data-number="4">
+                    <input type="text" maxlength="1" inputmode="numeric" pattern="\d*" data-number="5">
+                    <input type="text" maxlength="1" inputmode="numeric" pattern="\d*" data-number="6">
+                    <input type="text" maxlength="1" inputmode="numeric" pattern="\d*" data-number="7">
+                    <input type="text" maxlength="1" inputmode="numeric" pattern="\d*" data-number="8">
+                    <input type="text" maxlength="1" inputmode="numeric" pattern="\d*" data-number="9">
+                    <button id="submit"><i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </form>
+            <form id="validCodeForm" class="form" action="#" method="post" style="display: none;">
+                <div class="FormContainer">
+                    <h3>驗證碼</h3>
+                    <input type="text" maxlength="1" inputmode="numeric" pattern="\d*" data-code="1">
+                    <input type="text" maxlength="1" inputmode="numeric" pattern="\d*" data-code="2">
+                    <input type="text" maxlength="1" inputmode="numeric" pattern="\d*" data-code="3">
+                    <input type="text" maxlength="1" inputmode="numeric" pattern="\d*" data-code="4">
+                    <input type="text" maxlength="1" inputmode="numeric" pattern="\d*" data-code="5">
+                    <input type="text" maxlength="1" inputmode="numeric" pattern="\d*" data-code="6">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
